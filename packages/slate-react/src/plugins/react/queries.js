@@ -24,7 +24,7 @@ function QueriesPlugin() {
     const content = editor.tmp.contentRef.current
 
     if (!path.size) {
-      return content.ref.current || null
+      return (content && content.ref.current) || null
     }
 
     const search = (instance, p) => {
